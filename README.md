@@ -1,12 +1,34 @@
-# OH, THE PLACES WE'VE BEEN
+# Reflection Project
 
-> **PLEASE COMMENT YOUR CODE.** Do not clone this repository. Instead, download the zip, extract the contents, `git init`, `git add .`, `git commit -m "initial commit - base project"` and add your remote. Please do this before you leave for the day.
+This application will let users post reflectionary tidbits about a topic of their choice. This app has been deployed to: 
+<!-- insert heroku website here -->
 
-Reflection is an important part of building applications and working with a team. It's common to have a retrospective on a bi-weekly basis during a project and at the end of a project. As we approach the end of teir 2, we would like you to reflect on everthing you've accomplished. For this assignment, you will be creating a reflection board. There should be two views, one to add a reflection and another to display reflections that you've added (most recent at the top). You should also be able to remove a reflection.
+## Built With
 
-### SETUP
+axios, material-ui, pg, react, redux
 
-Create your database and tables using the provided `data.sql` file. Start the server.
+### Database Setup
+
+Steps to get the development environment running.
+
+```sql
+-- Database should be reflection_board
+CREATE DATABASE "reflection_board";
+
+-- Switch to "reflection_board" before running the following
+-- Table to store the reflections
+CREATE TABLE "reflection" (
+  "id" serial primary key,
+  "topic" varchar(120),
+  "description" varchar(480),
+  "bookmarked" boolean default false,
+  "date" date not null default CURRENT_DATE
+);
+```
+
+## Getting Started
+
+Create your database and tables using the Installing section of this README above. Start the server:
 
 ```
 npm install
@@ -18,30 +40,42 @@ Now that the server is running, open a new terminal tab with `cmd + t` and start
 ```
 npm run client
 ```
+### Prerequisites
 
-### ADD NEW REFLECTION
+- [Node.js](https://nodejs.org/en/)
+- [postgresql](https://www.postgresql.org/download/)
 
-> NOTE: As a baseline requirement, you should use Redux to store your data. Using Sagas is a **stretch goal**.
 
-Create a form that allows users to add a new reflection. A new reflection should be added in the database with the current date by default. 
 
-![add new reflection](wireframes/screen-one.png)
+<!-- ## Screen Shot
 
-### DISPLAY REFLECTIONS
+Include one or two screen shots of your project here (optional). Remove if unused. -->
 
-Display a list of the existing reflections. The most recently added reflection should appear at the top of the list. Allow the user to delete existing reflections. Prompt the user to confrim prior to deleting the reflection from the database. Add a button that allows users to bookmark a reflection.
+## Documentation
 
-![display reflections](wireframes/screen-two.png)
+- [Node.js](https://nodejs.org/en/)
+- [React.js](https://reactjs.org/)
+- [postgresql](https://www.postgresql.org/docs/)
+- [material-ui-next](https://material-ui-next.com/)
 
-## STRETCH GOALS
+### Completed Features
 
-- Update this README.md to describe the project in your own words
-- Deploy your project to Heroku
-- Improve the stying of the app using Material-UI cards, buttons, nav bar and icons
-- Move your HTTP requests into sagas
-- Add the ability to update an existing reflection
-- Move reflection topics into a separate table and use SQL JOINs
-- Allow users to include an image with the reflection using [Filestack](https://www.filestack.com/)
-- Ability to filter reflections based on topic
+High level list of items completed.
 
-> NOTE: These stretch goals are intended to be completed in order.
+- [ ] 
+- [ ] 
+
+### Next Steps
+
+Features that you would like to add at some point in the future.
+
+- [ ] Add different users feature
+
+## Authors
+
+* Teagan Nouska
+
+
+## Acknowledgments
+
+* Thank you to PrimeAcadamy Staff for the base initialization of this project.
