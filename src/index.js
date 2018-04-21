@@ -7,6 +7,8 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
+import reducers from "./redux/reducers/reflections.reducer";
+import rootSaga from './redux/sagas/root.saga'
 
 const sagaMiddleware = createSagaMiddleware();
 //creates the saga middleware.

@@ -7,7 +7,7 @@ export const reflectionsList = (state = [], action) => {
             return action.payload
         default:
             return state;
-    };//end switch looking for 'SET_REFLECTIONS'
+    }//end switch looking for 'SET_REFLECTIONS'
 };//end reflectionsList reducer
 
 export default combineReducers({ reflectionsList }) 
