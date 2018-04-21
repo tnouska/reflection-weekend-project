@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import ReflectionList from '../ReflectionList/ReflectionList';
-import ReflectionForm from '../ReflectionForm/ReflectionForm'
+// import ReflectionForm from '../ReflectionForm/ReflectionForm'
 
 class App extends Component {
   render() {
@@ -23,8 +23,8 @@ class App extends Component {
             </li>
           </ul>
           <br/>
-          <Route exact path='/' component={ReflectionForm} />
-          <Route path='/past' component={RelfectionList} />
+          {/* <Route exact path='/' component={ReflectionForm} /> */}
+          <Route path='/past' component={ReflectionList} />
         </div>
       </Router>
     );
