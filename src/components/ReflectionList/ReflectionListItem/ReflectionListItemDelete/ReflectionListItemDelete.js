@@ -6,9 +6,16 @@ import { connect } from 'react-redux';
 
 class ReflectionListItemDelete extends Component {
 
+deleteReflection = () =>{
+    this.props.dispatch({
+        type: 'DELETE_REFLECTION',
+        payload: this.props.reflection.id
+    })
+} 
+
 render() {
     return (
-        <p></p>
+        <IconButton onClick={this.deleteReflection}><Delete/></IconButton>
     )
 }
 
