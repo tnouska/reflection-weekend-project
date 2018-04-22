@@ -13,3 +13,10 @@ export function* getReflectionSaga(action){
     };//end catch of getReflectionSaga
 };//end getReflectionSaga function
 
+export function* updateBookmarkSaga(action){
+    try {
+        yield call(axios.put, `/reflection/${action.payload.id}`, action.payload)
+    } catch (error) {
+        console.log('error in updateBookmarkSaga: ', error);
+    }//end try/catch sending out axios.put to update database
+};//end updateBookmarkSaga
