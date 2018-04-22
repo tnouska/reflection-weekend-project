@@ -34,3 +34,14 @@ export function* deleteReflectionSaga(action){
         console.log('error in deleteReflectionSaga: ', error);
     };//end try/catch to send out axios.delete to remove by id from the database
 };// end deleteReflectionSaga
+
+export function* postReflectionSaga(action){
+    try {
+        yield call(axios.post, '/reflection', action.payload)
+        yield put({
+            type: 'FETCH_REFLECTION'
+        })//end put to rerun the getReflectionSaga
+    } catch (error) {
+        console.log('error in postReflectionSaga: ', error);
+    };//end try/catch to post data to database with axios
+};//end postReflectionSaga
