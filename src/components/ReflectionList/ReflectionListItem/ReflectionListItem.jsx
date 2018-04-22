@@ -3,6 +3,7 @@ import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import BookmarkButton from './ReflectionListItemBookmark/ReflectionListItemBookmark';
 import DeleteButton from './ReflectionListItemDelete/ReflectionListItemDelete'
+import moment from 'moment'
 
 class ReflectionListItem extends Component {
     // constructor(props){
@@ -19,7 +20,7 @@ class ReflectionListItem extends Component {
         
     }
     render() {
-        
+        let time = moment(this.props.reflection.date).format('l')
         return(
             <div>
                 <Card className='card'>
@@ -28,7 +29,7 @@ class ReflectionListItem extends Component {
                             {this.props.reflection.topic}
                         </Typography>
                         <Typography className='date'>
-                            Added on: {this.props.reflection.date}
+                            Added on: {time}
                         </Typography>
                         <Typography>
                             {this.props.reflection.description}
