@@ -13,3 +13,24 @@ export function* getReflectionSaga(action){
     };//end catch of getReflectionSaga
 };//end getReflectionSaga function
 
+export function* updateBookmarkSaga(action){
+    try {
+        yield call(axios.put, `/reflection/${action.payload.id}`, action.payload)
+        yield put({
+            type:'FETCH_REFLECTION'
+        })//end put to rerun the getReflectionSaga
+    } catch (error) {
+        console.log('error in updateBookmarkSaga: ', error);
+    }//end try/catch sending out axios.put to update database
+};//end updateBookmarkSaga
+
+export function* deleteReflectionSaga(action){
+    try {
+        yield call(axios.delete, `/reflection/${action.payload}`)
+        yield put({
+            type: 'FETCH_REFLECTION'
+        })//end put to rerun the getReflectionSaga
+    } catch (error) {
+        console.log('error in deleteReflectionSaga: ', error);
+    };//end try/catch to send out axios.delete to remove by id from the database
+};// end deleteReflectionSaga
