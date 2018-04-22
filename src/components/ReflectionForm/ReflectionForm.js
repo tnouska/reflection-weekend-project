@@ -15,18 +15,17 @@ class ReflectionForm extends Component{
 
 handleInputChange = (event) => {
     this.setState({
-        topic: event.target.topic,
-        description: event.target.description
-    })
-}
+        [event.target.name]: event.target.value
+    });//end setState to save form inputs temporailly 
+};//end handleInputChange to run on change of Topic and Description inputs.
 
 handleSubmit = (event) => {
     event.preventDefault();
     this.props.dispatch({
         type: 'POST_REFLECTION',
         payload: this.state
-    })
-}
+    });//end dispatch method to send POST_REFLECTION TO rootSaga with ReflectionForm State
+};//end handleSubmit function
 
 
 render(){
@@ -34,9 +33,9 @@ render(){
         <Paper>
             <form onSubmit={this.handleSubmit}>
                 <Typography>Topic</Typography>
-                <input name="topic"  onChange={this.handleInputChange}></input>
+                <input className='topicInput' name="topic"  onChange={this.handleInputChange}></input>
                 <Typography>Reflection</Typography>
-                <textarea name="description"  onChange={this.handleInputChange}></textarea>
+                <input className='descriptionInput' name="description"  onChange={this.handleInputChange}></input>
                 <Button type='submit' value='Submit'>Submit</Button>
             </form>
         </Paper>
