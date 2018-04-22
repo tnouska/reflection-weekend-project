@@ -62,14 +62,18 @@ Include one or two screen shots of your project here (optional). Remove if unuse
 
 High level list of items completed.
 
-- [ ] 
-- [ ] 
+- [x] Display past reflections onto DOM 
+- [x] Implement bookmark feature 
+- [x] Create Delete Button for each reflection
+- [ ] Better style header and card with material-ui
+- [ ] Fix Time format on card using moment.js
+- [ ] Add form to Add New Reflection on add new reflection page
 
 ### Next Steps
 
 Features that you would like to add at some point in the future.
 
-- [ ] Add different users feature
+- [ ] Add a multiple users feature
 
 ## Authors
 
