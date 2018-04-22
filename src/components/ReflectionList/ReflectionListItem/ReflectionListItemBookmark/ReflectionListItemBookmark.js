@@ -9,14 +9,16 @@ class ReflectionListItemBookmark extends Component {
     switchBookmark = () => {
         this.props.dispatch({
             type: 'CHANGE_BOOKMARK',
-            payload: { id: this.props.reflection.id, bookmarked: !this.props.reflection.bookmarked }
+            payload: { id: this.props.reflection.id, bookmarked: this.props.reflection.bookmarked }
         });//end this.props.dispatch to send 'CHANGE_BOOKMARK
 
     
     }
     render(){
         let bookmark;
-        if (this.props.reflection.bookmakred) {
+        console.log(this.props.reflection);
+        
+        if (this.props.reflection.bookmarked) {
             bookmark = <Bookmark />
         } else {
             bookmark = <BookmarkBorder />

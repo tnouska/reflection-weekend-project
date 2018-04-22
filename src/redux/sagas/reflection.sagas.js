@@ -16,6 +16,9 @@ export function* getReflectionSaga(action){
 export function* updateBookmarkSaga(action){
     try {
         yield call(axios.put, `/reflection/${action.payload.id}`, action.payload)
+        yield put({
+            type:'FETCH_REFLECTION'
+        })
     } catch (error) {
         console.log('error in updateBookmarkSaga: ', error);
     }//end try/catch sending out axios.put to update database

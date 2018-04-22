@@ -4,7 +4,7 @@ const pool = require('../modules/pool')
 //sources in pool.js so that we can use the reflection_board database as our pool
 
 router.get('/', (req,res)=> {
-    const queryText = 'SELECT * from "reflection"';
+    const queryText = 'SELECT * from "reflection" ORDER BY date DESC, id ASC;';
     pool.query(queryText)
     .then((response)=> {
         res.send(response.rows);
@@ -29,7 +29,7 @@ router.post('/',(req,res)=>{
 
 router.put('/:id',(req,res)=>{
     const queryText = 'UPDATE reflection SET bookmarked = $1 WHERE id = $2';
-    pool.query(queryText, [req.body.bookmarked, req.body.id])
+    pool.query(queryText, [!req.body.bookmarked, req.body.id])
     .then((response)=>{
         res.sendStatus(200);
     })//end .then for pool.query
