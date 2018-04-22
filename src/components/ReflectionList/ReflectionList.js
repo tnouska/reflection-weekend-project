@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
+import ReflectionListItem from './ReflectionListItem/ReflectionListItem'
 //enables use of connect to redux
 
 class ReflectionList extends Component{
@@ -8,12 +9,14 @@ class ReflectionList extends Component{
             type: 'FETCH_REFLECTION'
         })
     }
+
     render(){
+        let AllPastReflections = this.props.reduxState.pastReflections.map((reflection)=>{
+            return <ReflectionListItem key={reflection.id} reflection={reflection} />
+        })
         return(
             <div>
-                <p>
-                    test: {JSON.stringify(this.props.reduxState)}
-                </p>
+                {AllPastReflections}
             </div>
         )
     }
