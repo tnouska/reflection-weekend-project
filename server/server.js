@@ -13,6 +13,6 @@ app.use(express.static('build'));
 app.use('/reflection', reflectionsRouter)
 
 /** ---------- START SERVER ---------- **/
-app.listen(port, function () {
+app.listen(port,'0.0.0.0', function () {
     console.log('Listening on port: ', port);
 });
