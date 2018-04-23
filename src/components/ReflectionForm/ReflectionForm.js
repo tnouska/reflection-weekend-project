@@ -33,9 +33,9 @@ render(){
         <Paper>
             <form onSubmit={this.handleSubmit}>
                 <Typography>Topic</Typography>
-                <input className='topicInput' name="topic"  onChange={this.handleInputChange}></input>
+                <textarea rows='2' cols='100' className='topicInput' name="topic"  onChange={this.handleInputChange} />
                 <Typography>Reflection</Typography>
-                <input className='descriptionInput' name="description"  onChange={this.handleInputChange}></input>
+                <textarea rows='15' cols='100' className='descriptionInput' name="description"  onChange={this.handleInputChange}/>
                 <br/>
                 <Button type='submit' value='Submit'>Submit</Button>
             </form>

@@ -7,13 +7,13 @@ import ReflectionForm from '../ReflectionForm/ReflectionForm'
  
 
 class ReflectionNavBar extends Component {
-    state = {
-        selectedTab: '',
-    }
+    // state = {
+    //     selectedTab: '',
+    // }
 
-    handleTabClick = (event, value) => {
-        this.setState({ selectedTab: value });
-    }
+    // handleTabClick = (event, value) => {
+    //     this.setState({ selectedTab: value });
+    // }
 
 render(){
     return (
