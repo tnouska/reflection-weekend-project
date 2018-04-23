@@ -36,6 +36,7 @@ render(){
                 <input className='topicInput' name="topic"  onChange={this.handleInputChange}></input>
                 <Typography>Reflection</Typography>
                 <input className='descriptionInput' name="description"  onChange={this.handleInputChange}></input>
+                <br/>
                 <Button type='submit' value='Submit'>Submit</Button>
             </form>
         </Paper>
