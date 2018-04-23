@@ -47,9 +47,10 @@ npm run client
 
 
 
-<!-- ## Screen Shot
+## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused. -->
+![display reflections](screenshots/past)
+![display form](screenshots/form)
 
 ## Documentation
 
