@@ -49,8 +49,8 @@ npm run client
 
 ## Screen Shot
 
-![display reflections](screenshots/past)
-![display form](screenshots/form)
+![display reflections](screenshots/past.png)
+![display form](screenshots/form.png)
 
 ## Documentation
 
