@@ -5,20 +5,16 @@ import BookmarkButton from './ReflectionListItemBookmark/ReflectionListItemBookm
 import DeleteButton from './ReflectionListItemDelete/ReflectionListItemDelete'
 import moment from 'moment'
 
+
 class ReflectionListItem extends Component {
-    // constructor(props){
-    //     super(props);
-    //     this.state = {
-    //     }
-    // }
     switchBookmark = () =>{
-        
         this.props.dispatch({
             type: 'CHANGE_BOOKMARK',
             payload: {id: this.props.reflection.id, newBookmark: !this.props.reflection.bookmarked}
-        })
-        
-    }
+        });//end dispatch to rootSaga
+    };//end switchBookmark function
+
+
     render() {
         let time = moment(this.props.reflection.date).format('l')
         return(
@@ -41,8 +37,8 @@ class ReflectionListItem extends Component {
                     </CardActions>
                 </Card>
             </div>
-        )
-    }
-}
+        );// end return
+    };//end render
+};//end ReflectionListItem class
 
 export default ReflectionListItem

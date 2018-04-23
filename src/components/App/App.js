@@ -11,13 +11,11 @@ class App extends Component {
       <Router>
         <div className="App">
           <ReflectionNavBar />
-          {/* <Route exact path='/' component={ReflectionList} />
-          <Route path='/form' component={ReflectionForm} />  */}
         </div>
       </Router>
-    );
-  }
-}
+    );//end return
+  };//end render 
+};//end App Class
 
 const mapStateToProps = reduxState => ({
   reduxState,

@@ -16,19 +16,17 @@ class ReflectionListItemBookmark extends Component {
     }
     render(){
         let bookmark;
-        console.log(this.props.reflection);
-        
+        //creates bookmark variable        
         if (this.props.reflection.bookmarked) {
             bookmark = <Bookmark />
         } else {
             bookmark = <BookmarkBorder />
-        }
+        };//end if/else to display Bookmark and BookmarkBorder
             return(
             <IconButton onClick={this.switchBookmark}>{bookmark}</IconButton>
-        )
-    }
-
-}
+        );//end return
+    };//end render
+};//end ReflectionListItemBookmark Class
 
 const mapStateToProps = reduxState => ({
     reduxState,

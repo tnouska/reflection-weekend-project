@@ -40,9 +40,8 @@ render(){
                 <Button type='submit' value='Submit'>Submit</Button>
             </form>
         </Paper>
-
-    )
-}
+    );//end return
+};//end render
 
 };//end ReflectionForm Class
 

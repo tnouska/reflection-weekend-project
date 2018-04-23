@@ -5,7 +5,7 @@ This application will let users post reflectionary tidbits about a topic of thei
 
 ## Built With
 
-axios, material-ui, pg, react, redux
+axios, material-ui, pg, react, redux, moment
 
 ### Database Setup
 
@@ -57,6 +57,7 @@ Include one or two screen shots of your project here (optional). Remove if unuse
 - [React.js](https://reactjs.org/)
 - [postgresql](https://www.postgresql.org/docs/)
 - [material-ui-next](https://material-ui-next.com/)
+- [Moment.js](https://momentjs.com/docs/)
 
 ### Completed Features
 
@@ -65,9 +66,14 @@ High level list of items completed.
 - [x] Display past reflections onto DOM 
 - [x] Implement bookmark feature 
 - [x] Create Delete Button for each reflection
-- [ ] Better style header and card with material-ui
-- [ ] Fix Time format on card using moment.js
-- [ ] Add form to Add New Reflection on add new reflection page
+- [x] Better style header and card with material-ui
+- [x] Fix Time format on card using moment.js
+- [x] Add form to Add New Reflection on add new reflection page
+
+### Known Issues
+
+- Material-UI-Next tabs issuing warning, needs to be looked at.
+
 
 ### Next Steps
 
